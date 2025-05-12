@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --brand-red: #ee2b47;
+  --brand-red-light: #f55a78;
+  --brand-red-dark: #d62642;
+  --brand-red-primary: #ee2b47;
+  --brand-red-secondary: #f55a78;
+  --brand-red-tertiary: #d62642;
+  --brand-red-quaternary: #b7002e;
+  --brand-red-quinary: #980029;
+  --brand-red-senary: #7a0025;
+  --brand-red-septenary: #5b0020;
+  --brand-red-octonary: #3d001c;
+  --brand-red-nonary: #1e0017;
+  --brand-red-denary: #000013;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+/* Brand Colors */
+.bg-brand-red-primary {
+  background-color: var(--brand-red-primary);
+}
+.bg-brand-red-light {
+  background-color: var(--brand-red-light);
+}
+.bg-brand-red-dark {
+  background-color: var(--brand-red-dark);
+}
+.text-brand-black {
+  color: #111111;
+}
+.text-brand-white {
+  color: #ffffff;
+}
+.bg-brand-off-white {
+  background-color: #f6f6f6;
+}
+.bg-brand-white {
+  background-color: #ffffff;
+}
+.text-brand-red-primary {
+  color: var(--brand-red-primary);
+}
+.text-brand-gray-medium {
+  color: #666666;
+}
+.bg-brand-black {
+  background-color: #111111;
+}
+.bg-brand-gray-light {
+  background-color: #dedede;
+} 

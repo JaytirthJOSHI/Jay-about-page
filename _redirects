@@ -1,0 +1,11 @@
+# Redirect default subdomain to primary domain
+https://jay-about-page.pages.dev/* https://jay.health-sathi.org/:splat 301!
+
+# Redirect www to non-www
+https://www.jay.health-sathi.org/* https://jay.health-sathi.org/:splat 301!
+
+# Handle 404 errors
+/* /index.html 404
+
+# SPA fallback
+/* /index.html 200 

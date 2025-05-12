@@ -1,0 +1,6 @@
+# Contact information for security issues
+Contact: mailto:jaytirthjoshi@outlook.com
+Expires: 2025-12-31T23:59:59Z
+Preferred-Languages: en
+Canonical: https://jay.health-sathi.org/.well-known/security.txt
+Policy: https://health-sathi.org/security-policy 
