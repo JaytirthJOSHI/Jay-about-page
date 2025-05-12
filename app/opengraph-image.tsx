@@ -1,6 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
+export const dynamic = 'force-static'; // Required for static export
 
 export const alt = 'Jaytirth Joshi - CEO & Founder of HealthSathi';
 export const size = {
