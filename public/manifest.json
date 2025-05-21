@@ -1,31 +1,44 @@
 {
-  "name": "Jaytirth Joshi - CEO & Founder of HealthSathi",
+  "name": "Jaytirth Joshi | HealthSathi",
   "short_name": "Jay Joshi",
-  "description": "Jaytirth Joshi is a high school student and CEO/Founder of HealthSathi, an AI-driven healthcare platform.",
+  "description": "Personal website of Jaytirth Joshi, CEO & Founder of HealthSathi",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#d32f2f",
+  "theme_color": "#ffffff",
+  "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
-    {
-      "src": "/icon-192.png",
+      "src": "/icon-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/icon-512x512.png",
       "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "healthcare", "technology"],
+  "screenshots": [
+    {
+      "src": "/screenshot1.png",
+      "sizes": "1280x720",
       "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "About",
+      "url": "/about",
+      "description": "Learn more about Jaytirth Joshi"
+    },
+    {
+      "name": "Projects",
+      "url": "/projects",
+      "description": "View Jaytirth's projects"
     }
   ]
 } 

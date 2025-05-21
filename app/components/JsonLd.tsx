@@ -8,27 +8,45 @@ export default function JsonLd() {
         "name": "Jaytirth Joshi",
         "givenName": "Jaytirth",
         "familyName": "Joshi",
-        "alternateName": "Jay Joshi",
+        "alternateName": ["Jay Joshi", "Jaytirth Joshi"],
         "description": "High school student from Marietta, Georgia and CEO/Founder of HealthSathi, an AI-driven platform simplifying medical reports and improving healthcare accessibility worldwide.",
         "image": {
           "@type": "ImageObject",
           "@id": "https://jay.health-sathi.org/#personimage",
           "url": "https://jay.health-sathi.org/profile-image.jpg",
-          "width": 800,
-          "height": 800
+          "width": 1200,
+          "height": 630,
+          "caption": "Jaytirth Joshi - CEO & Founder of HealthSathi"
         },
         "url": "https://jay.health-sathi.org",
         "sameAs": [
           "https://www.linkedin.com/in/jaytirthjoshi",
-          "https://health-sathi.org"
+          "https://health-sathi.org",
+          "https://twitter.com/healthsathi",
+          "https://github.com/jaytirthjoshi"
         ],
-        "jobTitle": "CEO & Founder",
+        "jobTitle": ["CEO", "Founder"],
         "worksFor": {
           "@type": "Organization",
           "@id": "https://health-sathi.org/#organization",
           "name": "HealthSathi",
           "url": "https://health-sathi.org",
-          "description": "AI-driven platform designed to simplify medical information and improve healthcare accessibility."
+          "description": "AI-driven platform designed to simplify medical information and improve healthcare accessibility.",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://health-sathi.org/logo.png",
+            "width": 600,
+            "height": 600
+          },
+          "sameAs": [
+            "https://twitter.com/healthsathi",
+            "https://www.linkedin.com/company/healthsathi",
+            "https://facebook.com/healthsathi"
+          ],
+          "foundingDate": "2023",
+          "founder": {
+            "@id": "https://jay.health-sathi.org/#person"
+          }
         },
         "alumniOf": [
           {
@@ -57,31 +75,67 @@ export default function JsonLd() {
           "Medical Reports",
           "Healthcare Accessibility",
           "Start-up Ventures",
-          "Emergency Management"
+          "Emergency Management",
+          "Machine Learning",
+          "Natural Language Processing",
+          "Medical AI Solutions",
+          "Healthcare Innovation",
+          "Youth Entrepreneurship",
+          "Healthcare Technology Innovation"
         ],
         "hasCredential": [
           {
             "@type": "EducationalOccupationalCredential",
             "credentialCategory": "Award",
-            "name": "First Place Winner Of the Global Microsoft Youth Business Hackathon (Divergent Team)"
+            "name": "First Place Winner Of the Global Microsoft Youth Business Hackathon (Divergent Team)",
+            "awardedBy": "Microsoft"
           },
           {
             "@type": "EducationalOccupationalCredential",
             "credentialCategory": "Award",
-            "name": "Distinguished Delegate & 1st place Outstanding Delegation at MUN Conference"
+            "name": "Distinguished Delegate & 1st place Outstanding Delegation at MUN Conference",
+            "awardedBy": "Model United Nations"
           }
-        ]
+        ],
+        "award": [
+          {
+            "@type": "Award",
+            "name": "First Place Winner Of the Global Microsoft Youth Business Hackathon",
+            "awardedBy": "Microsoft"
+          },
+          {
+            "@type": "Award",
+            "name": "Distinguished Delegate & 1st place Outstanding Delegation at MUN Conference",
+            "awardedBy": "Model United Nations"
+          }
+        ],
+        "nationality": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "birthPlace": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "USA"
+          }
+        }
       },
       {
         "@type": "WebSite",
         "@id": "https://jay.health-sathi.org/#website",
         "url": "https://jay.health-sathi.org",
         "name": "Jaytirth Joshi - CEO & Founder of HealthSathi",
-        "description": "Personal website of Jaytirth Joshi, a high school student and medical AI innovator from Marietta, Georgia",
+        "description": "Personal website of Jaytirth Joshi, a high school student and medical AI innovator from Marietta, Georgia. Learn about his work in healthcare technology and AI innovation.",
         "publisher": {
           "@id": "https://health-sathi.org/#organization"
         },
-        "inLanguage": "en-US"
+        "inLanguage": "en-US",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://jay.health-sathi.org/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       },
       {
         "@type": "WebPage",
@@ -107,6 +161,10 @@ export default function JsonLd() {
         ],
         "mainEntity": {
           "@id": "https://jay.health-sathi.org/#person"
+        },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["article", "section"]
         }
       },
       {
