@@ -1,11 +1,18 @@
-"use client";
-
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import LinkedInBadge from './components/LinkedInBadge';
-import LinkedInPosts from './components/LinkedInPosts';
-import ScriptLoader from './components/ScriptLoader';
+import dynamic from 'next/dynamic';
+
+// Dynamically import client components
+const LinkedInBadge = dynamic(() => import('./components/LinkedInBadge'), {
+  ssr: false
+});
+const LinkedInPosts = dynamic(() => import('./components/LinkedInPosts'), {
+  ssr: false
+});
+const ScriptLoader = dynamic(() => import('./components/ScriptLoader'), {
+  ssr: false
+});
 
 export default function JayAboutPage() {
   // Skills list
@@ -67,28 +74,20 @@ export default function JayAboutPage() {
   ];
 
   return (
-    <main className="bg-brand-off-white min-h-screen">
+    <div className="bg-brand-off-white min-h-screen">
       {/* Script Loader */}
       <ScriptLoader />
       
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-r from-brand-red-dark to-brand-red-primary text-brand-white">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <Image
-            src="/profile-banner.jpg"
-            alt="Jaytirth Joshi LinkedIn Banner"
-            fill
-            style={{ objectFit: 'cover' }}
-            className="opacity-70"
-            priority
-          />
+          <div className="absolute inset-0 bg-brand-black opacity-30"></div>
         </div>
         <div className="container mx-auto px-6 text-center relative z-10">
-          <div className="relative w-40 h-40 rounded-full mx-auto mb-6 overflow-hidden border-4 border-brand-white shadow-xl">
+          <div className="relative w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden border-4 border-brand-white shadow-xl">
             <Image
-              src="/profile-image.jpg"
-              alt="Jaytirth Joshi - CEO & Founder of HealthSathi"
+              src="/images/team/jaytirth_joshi.png"
+              alt="Jaytirth Joshi"
               fill
               style={{ objectFit: 'cover' }}
               priority
@@ -106,15 +105,12 @@ export default function JayAboutPage() {
               href="https://health-sathi.org" 
               className="bg-brand-white text-brand-red-primary px-6 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all"
               target="_blank"
-              aria-label="Visit HealthSathi website"
-              rel="noopener noreferrer"
             >
               Visit HealthSathi
             </Link>
             <Link 
               href="mailto:jaytirthjoshi@outlook.com" 
               className="border-2 border-brand-white text-brand-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:bg-opacity-10 transition-all"
-              aria-label="Contact Jaytirth Joshi via email"
             >
               Contact Me
             </Link>
@@ -133,9 +129,8 @@ export default function JayAboutPage() {
             </p>
             <p className="mb-6">
               With a passion for enhancing healthcare and mental health for everyone, my experiences span hands-on medical internships 
-              and active involvement in Model UN, where I advocate for global health policies. Fluent in multiple languages including 
-              English and Chinese, and skilled in healthcare management, I combine leadership in start-up ventures with a commitment 
-              to addressing critical health issues.
+              and active involvement in Model UN, where I advocate for global health policies. Fluent in multiple languages and skilled in 
+              healthcare management, I combine leadership in start-up ventures with a commitment to addressing critical health issues.
             </p>
             <p>
               My mission is to bridge healthcare gaps through innovative technology and advocacy, making medical information 
@@ -254,14 +249,12 @@ export default function JayAboutPage() {
             <a 
               href="mailto:jaytirthjoshi@outlook.com" 
               className="bg-brand-white text-brand-red-primary px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all inline-block"
-              aria-label="Email Jaytirth Joshi"
             >
               Email: jaytirthjoshi@outlook.com
             </a>
             <a 
               href="tel:+17703765867" 
               className="border-2 border-brand-white text-brand-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:bg-opacity-10 transition-all inline-block"
-              aria-label="Call Jaytirth Joshi"
             >
               Phone: +1 (770) 376-5867
             </a>
@@ -286,6 +279,6 @@ export default function JayAboutPage() {
           </div>
         </div>
       </footer>
-    </main>
+    </div>
   );
-} 
+}
